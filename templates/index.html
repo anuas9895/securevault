@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+  
+  <title>SecureVault</title>
+
+  <link rel="shortcut icon" href="{% static 'assets/favicon.ico' %}" type="image/x-icon">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/themify-icons.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/animate/animate.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/owl-carousel/owl.carousel.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/nice-select/css/nice-select.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/fancybox/css/jquery.fancybox.min.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/virtual.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/topbar.virtual.css' %}">
+
+  <style>/* Resetting default button styles */
+    button {
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    
+    /* Container styling */
+    .container_button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vh;
+    }
+    
+    /* Sign-in button styling */
+    .sign-in-button {
+      background-color: #4CAF50; /* Green */
+      color: white;
+      padding: 10px 20px;
+      margin-right: 2px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    
+    /* Hover effect */
+    .sign-in-button:hover {
+      background-color: #45a049; /* Darker Green */
+    }
+    </style>
+
+  
+</head>
+<body class="theme-red">
+  
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+  
+ <!--  <!-- Setting button -->
+  <div class="config">
+    <div class="template-config">
+      <!-- Settings -->
+      <div class="d-block">
+        <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>
+      </div>
+    </div>
+    <div class="set-menu">
+      <p>Select Color</p>
+      <div class="color-bar" data-toggle="selected">
+        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
+        <span class="color-item bg-theme-blue" data-class="theme-blue"></span>
+        <span class="color-item bg-theme-green" data-class="theme-green"></span>
+        <span class="color-item bg-theme-orange" data-class="theme-orange"></span>
+        <span class="color-item bg-theme-purple" data-class="theme-purple"></span>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="vg-page page-home" id="home" style="background-image: url(static/assets/img/logo_main.jpg)">
+    <!-- Navbar -->
+    <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
+      <div class="container">
+        <a href="" class="navbar-brand">Secure-Vault</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
+          <span class="ti-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="#home" class="nav-link" data-animate="scrolling">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a href="sign_up" class="nav-link" data-animate="scrolling">SignUp</a>
+            </li>
+            <li class="nav-item active">
+              <a href="sign_in" class="nav-link" data-animate="scrolling">SignIn</a>
+            </li>
+        <!--     <li class="nav-item">
+              <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>
+            </li> -->
+            <li class="nav-item">
+              <a href="#about" class="nav-link" data-animate="scrolling">About</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div> <!-- End Navbar -->
+    <!-- Caption header -->
+    <div class="caption-header text-center wow zoomInDown">
+      <h5 class="fw-normal">Welcome To</h5>
+      <h1 class="fw-light mb-4"><b class="fg-theme">Secure</b> Vault</h1>
+      <div class="badge">Empowering you with control over your data, every step of the way.</div>
+    </div> <!-- End Caption header -->
+    <div class="floating-button"><span class="ti-mouse"></span></div>
+  </div>
+  
+  <div class="container_button">
+    <a href="sign_up"><button class="sign-in-button">Sign Up</button></a>
+    <a href="sign_in"><button class="sign-in-button">Sign In</button></a>
+  </div>
+  
+  <div class="vg-page page-service">
+    <div class="container">
+      <div class="text-center wow fadeInUp">
+        <div class="badge badge-subhead">Service</div>
+      </div>
+      <h1 class="fw-normal text-center wow fadeInUp">What can Secure Vault do?</h1>
+      <div class="row mt-5">
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-paint-bucket"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">personal data storage</h4>
+              <p>Storing personal data requires careful consideration to ensure compliance with data protection.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-search"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">Health Info</h4>
+              <p>Storing health information requires strict privacy standards to individual's confidential medical data.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-vector"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">Financial storage</h4>
+              <p>Financial storage involves organizating and retrieval of digital document info in a secure and accessible manner.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-desktop"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">Educational Info</h4>
+              <p>Storing education information involves securely managing academic records.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Contact -->
+  <!-- <div class="vg-page page-contact" id="contact">
+    <div class="container-fluid">
+      <div class="text-center wow fadeInUp">
+        <div class="badge badge-subhead">Contact</div>
+      </div>
+      <h1 class="text-center fw-normal wow fadeInUp">Get in touch</h1>
+      <div class="row py-5">
+        <div class="col-lg-7 px-0 pr-lg-3 wow zoomIn">
+           <div class="vg-maps">
+            <div id="google-maps" style="width: 100%; height: 100%;"></div>
+          </div> 
+        </div>
+        <div class="col-lg-5">
+          <form class="vg-contact-form">
+            <div class="form-row">
+              <div class="col-12 mt-3 wow fadeInUp">
+                <input class="form-control" type="text" name="Name" placeholder="Your Name">
+              </div>
+              <div class="col-6 mt-3 wow fadeInUp">
+                <input class="form-control" type="text" name="Email" placeholder="Email Address">
+              </div>
+              <div class="col-6 mt-3 wow fadeInUp">
+                <input class="form-control" type="text" name="Subject" placeholder="Subject">
+              </div>
+              <div class="col-12 mt-3 wow fadeInUp">
+                <textarea class="form-control" name="Message" rows="6" placeholder="Enter message here.."></textarea>
+              </div>
+              <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>  --><!-- End Contact -->
+  
+  <!-- Footer -->
+  <div class="vg-footer" id="about">
+    <h1 class="text-center">Secure Vault</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 py-3">
+          <div class="footer-info">
+            <p>@Secure_Vault</p>
+            <hr class="divider">
+            <p class="fs-large fg-white">all rights reserved website</p>
+          </div>
+        </div>
+      <!--   <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Follow me</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+        </div> -->
+        <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Contact me</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li>securevaultinfo@gmail.com</li>
+              <li>+7865432198</li>
+              <li>+8130289053</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        
+        <div class="col-12">
+          <p class="text-center mb-0 mt-4">Copyright &copy;2023. All right reserved | @Secure_Vault</a></p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End footer -->
+  
+  <script src="{% static 'assets/js/jquery-3.5.1.min.js' %}"></script>
+    
+  <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    
+  <script src="{% static 'assets/vendor/owl-carousel/owl.carousel.min.js' %}"></script>
+    
+  <script src="{% static 'assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js' %}"></script>
+    
+  <script src="{% static 'assets/vendor/isotope/isotope.pkgd.min.js' %}"></script>
+    
+  <script src="{% static 'assets/vendor/nice-select/js/jquery.nice-select.min.js' %}"></script>
+    
+  <script src="{% static 'assets/vendor/fancybox/js/jquery.fancybox.min.js' %}"></script>
+
+  <script src="{% static 'assets/vendor/wow/wow.min.js' %}"></script>
+
+  <script src="{% static 'assets/vendor/animateNumber/jquery.animateNumber.min.js' %}"></script>
+
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+
+  <script src="{% static 'assets/js/google-maps.js' %}"></script>
+    
+  <script src="{% static 'assets/js/topbar-virtual.js' %}"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+
+
+  
+</body>
+</html>
