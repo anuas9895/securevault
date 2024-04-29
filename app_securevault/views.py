@@ -45,26 +45,6 @@ def edcationaldatadetails(request):
     return render(request,"educationaldata.html")
 
 
-""" def sign_up_form(request):
-    if request.method=="POST":
-        a = request.POST["fname"]
-        b = request.POST["lname"]
-        c = request.POST["mob"]
-        d = request.POST["email"]
-        g = request.POST["address"]
-        e = request.POST["uname"]
-        f = request.POST["password"]
-        
-        h = Sign_in(username = e,password = f)
-        h.save()
-        m = Sign_up(first_name = a,last_name = b,mobile = c,email = d, address = g,username = e,password = f)
-        m.save()
-        return render(request,'success.html')
-
-    return render(request, 'signup.html') """
-
-
-
 def sign_up_form(request):
     if request.method == "POST":
         a = request.POST["fname"]
@@ -96,14 +76,14 @@ def login_form(request):
             a = request.POST["user"]
             b = request.POST["pass"]
 
-            # Using filter instead of get to handle multiple users with the same username
+     
             users_with_username = Sign_in.objects.filter(username=a)
 
             if not users_with_username.exists():
                 return render(request, "error.html", {'error_message': 'User not found'})
 
             if users_with_username.count() > 1:
-                # Handle the case where multiple users have the same username
+  
                 return render(request, "error.html", {'error_message': 'Multiple users with the same username'})
 
             q = users_with_username.first()
@@ -114,7 +94,7 @@ def login_form(request):
             else:
                 return render(request, "error.html", {'error_message': 'Incorrect password'})
     except MultipleObjectsReturned:
-        # Handle the case where multiple objects were returned unexpectedly
+    
         return render(request, "error.html", {'error_message': 'Error: Multiple objects returned for the same username'})
 
 """ def login_form(request):
@@ -145,20 +125,34 @@ def profile_data(request):
 
 def health_data(request):
     instance = Sign_in.objects.get(id=request.session["member_id"])
-    data = HealthRecord.objects.get(foreignkey=instance)
-    return render(request, 'healthdata.html', {'healthdata': data})
+    deal = HealthRecord.objects.filter(foreignkey=instance)
+    if not deal.exists():
+        return render(request, "error.html", {'error_message': 'data does not exist, kindly provide your data'})
+    else:
+       data = HealthRecord.objects.get(foreignkey=instance)
+       return render(request, 'healthdata.html', {'healthdata': data})
 
 def financial_data(request):
     
     instance = Sign_in.objects.get(id=request.session["member_id"])
-    data = FinancialDetails.objects.get(foreignkey=instance)
-    return render(request, 'financialdata.html', {'financialdata': data})
+    deal = FinancialDetails.objects.filter(foreignkey=instance)
+    if not deal.exists():
+        return render(request, "error.html", {'error_message': 'data does not exist, kindly provide your data'})
+    else:
+ 
+      data = FinancialDetails.objects.get(foreignkey=instance)
+      return render(request, 'financialdata.html', {'financialdata': data})
 
 def educational_data(request):
     
     instance = Sign_in.objects.get(id=request.session["member_id"])
-    data = EducationalDetails.objects.get(foreignkey=instance)
-    return render(request, 'educationaldata.html', {'educationaldata': data})
+    deal = EducationalDetails.objects.filter(foreignkey=instance)
+    if not deal.exists():
+        return render(request, "error.html", {'error_message': 'data does not exist, kindly provide your data'})
+    else:
+      
+      data = EducationalDetails.objects.get(foreignkey=instance)
+      return render(request, 'educationaldata.html', {'educationaldata': data})
 
 
 def health_formdata(request):
